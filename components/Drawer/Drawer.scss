@@ -1,0 +1,11 @@
+.drawer {
+  .drawer-bottom &-side {
+    & > *:not(.drawer-overlay) {
+      @apply transition-transform duration-300 ease-out will-change-transform;
+      transform: translateY(100%);
+      [dir="rtl"] & {
+        transform: translateY(100%);
+      }
+    }
+  }
+}

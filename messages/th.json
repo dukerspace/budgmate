@@ -1,0 +1,26 @@
+{
+  "common": {
+    "signIn": "เข้าสู่ระบบ",
+    "signUp": "ลงทะเบียน",
+    "email": "อีเมล์",
+    "username": "ชื่อผู้ใช้",
+    "password": "รหัสผ่าน",
+    "confirmPassword": "ยืนยันรหัสผ่าน",
+    "or": "หรือ",
+    "signOut": "ออกจากระบบ",
+    "settings": "ตั้งค่า",
+    "profile": "Profile",
+    "category": "Category",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "update": "Update",
+    "expense": "Expense",
+    "income": "Income",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "transaction": {
+    "add": "เพิ่มธุรกรรม",
+    "confirmDelete": "Confirm Delete"
+  }
+}
