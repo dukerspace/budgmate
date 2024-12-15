@@ -1,7 +1,7 @@
 import { auth } from '@/auth'
 import Header from '@/components/Header/Header'
-import ThemeProvider from '@/contexts/ThemeProvider'
 import { ReactQueryClientProvider } from '@/providers/ReactQueryClientProvider'
+import { ThemeProvider } from '@/providers/ThemeProvider'
 import type { Metadata } from 'next'
 import { SessionProvider } from 'next-auth/react'
 import { NextIntlClientProvider } from 'next-intl'
@@ -43,14 +43,14 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale}>
-      <ThemeProvider>
+    <html lang={locale} suppressHydrationWarning>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
         <SessionProvider session={session}>
           <ReactQueryClientProvider>
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
               <NextIntlClientProvider messages={messages}>
                 <Header />
-                <div className="container mx-auto">{children}</div>
+                <div className="container mx-auto mt-4">{children}</div>
               </NextIntlClientProvider>
             </body>
           </ReactQueryClientProvider>

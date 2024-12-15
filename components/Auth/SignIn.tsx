@@ -46,7 +46,7 @@ export default function SignIn() {
   }
 
   return (
-    <>
+    <div className="bg-white dark:bg-slate-800 p-4 m-4 rounded-md">
       <div>
         <p className="text-lg text-center">{t('common.signIn')}</p>
       </div>
@@ -61,7 +61,9 @@ export default function SignIn() {
             <Input
               type="text"
               placeholder={t('common.username')}
-              className={`input input-bordered w-full ${errors.username ? 'input-error' : null}`}
+              className={`dark:border-slate-600  w-full ${
+                errors.username ? 'border-rose-500' : null
+              }`}
               {...register('username')}
             />
           </div>
@@ -69,7 +71,9 @@ export default function SignIn() {
           <div>
             <PasswordInput
               placeholder={t('common.password')}
-              className={`input input-bordered w-full ${errors.password ? 'input-error' : null}`}
+              className={`dark:border-slate-600  w-full ${
+                errors.password ? 'border-rose-500' : null
+              }`}
               {...register('password')}
             />
           </div>
@@ -83,6 +87,6 @@ export default function SignIn() {
       <div className="text-center pt-4">
         <Link href={'/auth/signup'}>{t('common.signUp')}</Link>
       </div>
-    </>
+    </div>
   )
 }

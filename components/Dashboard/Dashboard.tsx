@@ -18,9 +18,9 @@ export default function Dashboard() {
       {status === AuthStatus.authen ? (
         wallets?.data?.map((wallet: IWalletViewDto, i: number) => {
           return (
-            <p key={i}>
+            <div key={i}>
               <WalletCard data={wallet} />
-            </p>
+            </div>
           )
         })
       ) : (

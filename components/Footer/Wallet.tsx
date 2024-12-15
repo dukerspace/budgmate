@@ -11,7 +11,7 @@ const FooterWallet: React.FC<Props> = ({ walletId }) => {
   const router = useRouter()
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200">
+    <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-800 shadow-lg border-t border-gray-200">
       <div className="flex justify-center p-4">
         <div className="p-2">
           <button onClick={() => router.push('/')}>

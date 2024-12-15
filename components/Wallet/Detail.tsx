@@ -13,7 +13,7 @@ type Props = {
 const WalletDetail: React.FC<Props> = ({ walletId, transactions }) => {
   return (
     <>
-      <div className="">
+      <div>
         <TopCategory walletId={walletId} />
         <TransactionList walletId={walletId} data={transactions} />
       </div>

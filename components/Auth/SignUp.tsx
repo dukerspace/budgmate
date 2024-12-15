@@ -55,7 +55,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="container mx-auto max-w-96">
+    <div className="bg-white dark:bg-slate-800 p-4 m-4 rounded-md">
       <div>
         <p className="text-lg text-center">{t('common.signUp')}</p>
       </div>
@@ -66,7 +66,9 @@ export default function SignUp() {
             <Input
               type="text"
               placeholder={t('common.username')}
-              className={`input input-bordered w-full ${errors.username ? 'input-error' : null}`}
+              className={`dark:border-slate-600  w-full ${
+                errors.username ? 'border-rose-500' : null
+              }`}
               {...register('username')}
             />
           </div>
@@ -75,14 +77,16 @@ export default function SignUp() {
             <Input
               type="email"
               placeholder={t('common.email')}
-              className={`input input-bordered w-full ${errors.email ? 'input-error' : null}`}
+              className={`dark:border-slate-600  w-full ${errors.email ? 'border-rose-500' : null}`}
               {...register('email')}
             />
           </div>
 
           <div>
             <Input
-              className={`input input-bordered w-full ${errors.password ? 'input-error' : null}`}
+              className={`dark:border-slate-600  w-full ${
+                errors.password ? 'border-rose-500' : null
+              }`}
               type="password"
               placeholder={t('common.password')}
               {...register('password')}
@@ -91,8 +95,8 @@ export default function SignUp() {
 
           <div>
             <Input
-              className={`input input-bordered w-full ${
-                errors.confirmPassword ? 'input-error' : null
+              className={`dark:border-slate-600  w-full ${
+                errors.confirmPassword ? 'border-rose-500' : null
               }`}
               type="password"
               placeholder={t('common.confirmPassword')}
@@ -101,7 +105,7 @@ export default function SignUp() {
           </div>
 
           <div>
-            <Button type="submit" className="w-full btn btn-primary">
+            <Button type="submit" className="w-full text-white">
               {t('common.signUp')}
             </Button>
           </div>

@@ -12,7 +12,7 @@ export default function WalletIdPage({ params }: { params: { walletId: string } 
   const { data: transactions } = useGetTransactionByWalletId(walletId, formattedDate)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       {transactions && transactions && (
         <WalletDetail walletId={walletId} transactions={transactions.data} />
       )}

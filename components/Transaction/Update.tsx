@@ -15,6 +15,7 @@ import {
 import { ICategoryViewDto } from '@/types/category'
 import { ITransactionUpdateDto } from '@/types/transaction'
 import dayjs from 'dayjs'
+import { ArrowLeftToLine } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -68,7 +69,7 @@ const TransactionUpdate: React.FC<Props> = ({ walletId, transactionId }) => {
       setSelectedDate(dayjs(dataTransaction.data.date).toDate())
       setAmount(dataTransaction.data.amount)
     }
-    setCategories(dataCategory!.data)
+    setCategories(dataCategory?.data || [])
   }, [loadTransaction, dataTransaction, dataCategory, loadCategory])
 
   const onSelectCategory = (category: ICategoryViewDto) => {
@@ -134,6 +135,7 @@ const TransactionUpdate: React.FC<Props> = ({ walletId, transactionId }) => {
     </>
   ) : (
     <div className="p-4">
+      <div onClick={() => router.back()}>{<ArrowLeftToLine />}</div>
       <h2>{t('transaction.add')}</h2>
       <div>
         <TransactionCategory
